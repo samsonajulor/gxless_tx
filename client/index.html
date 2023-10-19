@@ -1,0 +1,34 @@
+<html>
+<head>
+
+    <title>Abstraction Test</title>
+
+    <script src="bundle.js">
+    </script>
+
+</head>
+<body>
+<h2>Abstraction</h2>
+
+<script>
+    window.app.initContract().then(function ({contractAddress, network}) {
+        console.log('Abstraction contract', contractAddress)
+        // console.log(`identified network: ${JSON.stringify(network)}`)
+        document.getElementById('capture_button').disabled = false
+    })
+</script>
+
+<button id="capture_button" disabled onClick="window.app.callIncrement()">
+    Capture the flag
+</button>
+
+
+
+<button id="getcaller_button" onClick="window.app.getLastCaller()">
+    Capture the flag
+</button>
+
+<hr>
+<div id="logview"></div>
+</body>
+</html>
