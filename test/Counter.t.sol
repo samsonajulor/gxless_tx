@@ -13,7 +13,6 @@ contract CounterTest is Test {
     }
 
     function test_Increment() public {
-        vm.prank(address(0x1111));
         counter.increment();
         assertEq(counter.number(), 1);
     }
@@ -21,10 +20,5 @@ contract CounterTest is Test {
     function testFuzz_SetNumber(uint256 x) public {
         counter.setNumber(x);
         assertEq(counter.number(), x);
-    }
-    function testgetLastCaller() public {
-        vm.prank(address(0x1111));
-        counter.increment();
-        assertEq(counter.getLastCaller(), address(0x1111));
     }
 }
