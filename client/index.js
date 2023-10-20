@@ -53,7 +53,7 @@ async function callDecrement() {
   await window.ethereum.send('eth_requestAccounts');
 
   const txOptions = { gasPrice: await provider.getGasPrice() };
-  const transaction = await theContract.increment(txOptions);
+  const transaction = await theContract.decrement(txOptions);
   const hash = transaction.hash;
 
   alert(`Transaction ${hash} sent. Please wait for confirmation...`);
