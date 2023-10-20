@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Abstraction Test</title>
+    <style>
+        /* CSS to style the loading icon */
+        #loading-icon {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+    </style>
+
+    <script src="bundle.js"></script>
+  </head>
+  <body>
+    <div id="loading-icon">
+        <h1>Loading...</h1>
+    </div>
+
+    <h2>Abstraction! Refresh to connect!</h2>
+
+    <script>
+      window.app.initContract().then(function () {
+        console.log('connected');
+        alert('connected on refresh!');
+      });
+    </script>
+
+    <button id="capture_button" onClick="window.app.callIncrement()">increment counter</button>
+
+    <button id="decrement_button" onClick="window.app.callDecrement()">decrement counter</button>
+
+    <button id="getnumber_button" onClick="window.app.getNumber()">get number</button>
+
+    <button id="getcaller_button" onClick="window.app.getLastCaller()">get last caller</button>
+
+    <hr>
+
+    <div><span>value: </span> <span id="number">0</span></div>
+
+    <hr />
+    <!-- <div id="logview"></div> -->
+    <!-- <hr /> -->
+    <div><span>hash: </span><span id="hash">xxxxxx</span></div>
+    <hr />
+
+    <div><span>block number: </span><span id="block">xxxxxx</span></div>
+    <hr />
+    <div><span>caller: </span><span id="caller">xxxxxx</span></div>
+    <hr />
+  </body>
+</html>

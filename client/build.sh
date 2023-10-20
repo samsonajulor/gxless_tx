@@ -3,7 +3,11 @@
 rm -rf ./build/html/
 mkdir ./build/html/
 
-./node_modules/browserify/bin/cmd.js index.js -o  ./build/html/bundle.js
+rm -rf ../doc/
+mkdir ../doc/
+
+./node_modules/browserify/bin/cmd.js index.js -o  ../doc/bundle.js
 cp ./index.html ./build/html/
+cp ./index.html ../doc/
 
 echo "Done building \"./build/html\" at `date`"
