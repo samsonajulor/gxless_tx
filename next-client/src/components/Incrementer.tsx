@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ethers } from 'ethers';
 import { IHybridPaymaster, SponsorUserOperationDto, PaymasterMode } from '@biconomy/paymaster';
-import { BiconomySmartAccount } from '@biconomy/account';
+import { BiconomySmartAccountV2 } from '@biconomy/account';
 import contractArtifact from '../../../out/Counter.sol/Counter.json';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,7 +12,7 @@ const contractAbi = contractArtifact.abi;
 
 
 interface Props {
-  smartAccount: BiconomySmartAccount;
+  smartAccount: BiconomySmartAccountV2;
   address: string;
   provider: ethers.providers.Provider;
 }
