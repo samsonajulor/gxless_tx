@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@biconomy/account": "^3.1.0",
+    "@biconomy/bundler": "^3.1.0",
+    "@biconomy/common": "^3.1.0",
+    "@biconomy/core-types": "^3.1.0",
+    "@biconomy/particle-auth": "^3.1.0",
+    "@biconomy/paymaster": "^3.1.0",
+    "ethers": "5.7.2"
+  }
+}
