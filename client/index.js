@@ -47,6 +47,8 @@ async function callIncrement() {
   const id2 = document.getElementById('block');
   id2.innerText = receipt.blockNumber;
   toggleLoadingIcon(false);
+
+  await getNumber();
 }
 
 async function callDecrement() {
@@ -66,6 +68,8 @@ async function callDecrement() {
   const id2 = document.getElementById('block');
   id2.innerText = receipt.blockNumber;
   toggleLoadingIcon(false);
+
+  await getNumber();
 }
 
 async function getLastCaller() {
